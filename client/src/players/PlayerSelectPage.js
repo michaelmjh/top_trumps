@@ -3,15 +3,19 @@ import {Link} from 'react-router-dom';
 import PlayerForm from './PlayerForm';
 import PlayerList from './PlayerList';
 
-function PlayerSelectPage({allPlayers, playerDetailsClicked}) {
-  
-    
-  
+function PlayerSelectPage({allPlayers, createPlayer, startGameClicked, playerDetailsClicked, deletePlayerClicked}) {
+
     return (
         <>
             <h1>Player Select Page</h1>
-            <PlayerForm />
-            <PlayerList allPlayers={allPlayers} playerDetailsClicked={playerDetailsClicked}/>
+                <PlayerForm createPlayer={createPlayer}/>
+                <PlayerList 
+                    allPlayers={allPlayers} 
+                    startGameClicked={startGameClicked}
+                    playerDetailsClicked={playerDetailsClicked}
+                    deletePlayerClicked={deletePlayerClicked}
+                />
+            
         </>
     );
 }

@@ -1,11 +1,17 @@
 import React from 'react';
 import PlayerListItem from './PlayerListItem';
 
-function PlayerList({allPlayers, playerDetailsClicked}) {
+function PlayerList({allPlayers, startGameClicked, playerDetailsClicked, deletePlayerClicked}) {
   
     const playerNodes = allPlayers.map((player, index) => {
         return (
-            <PlayerListItem key={index} player={player} playerDetailsClicked={playerDetailsClicked} />
+            <PlayerListItem 
+                key={index} 
+                player={player} 
+                startGameClicked = {startGameClicked}
+                playerDetailsClicked={playerDetailsClicked} 
+                deletePlayerClicked={deletePlayerClicked}
+            />
         )
     })
   
