@@ -11,6 +11,8 @@ const App = () => {
     const [allPlayers, setAllPlayers] = useState([]);
     const [allCards, setAllCards] = useState([]);
     const [selectedPlayer, setSelectedPlayer] = useState(null);
+    const [playerDeck, setPlayerDeck] = useState([]);
+    const [aiDeck, setAiDeck] = useState([]);
 
     useEffect(() => {
         PlayerService.getPlayers()
@@ -33,8 +35,8 @@ const App = () => {
 
     const startGameClicked = (player) => {
         setSelectedPlayer(player);
-        //setplayerDeck
-        //setcomputerDeck
+        populatePlayerDeck();
+        populateAiDeck();
     }
 
     const playerDetailsClicked = () => {
@@ -45,6 +47,34 @@ const App = () => {
         const idToDelete = player._id;
         PlayerService.deletePlayer(idToDelete);
         setAllPlayers(allPlayers.filter(player => player._id !== idToDelete));
+    }
+
+    const generateRandomDeck = () => {
+        let index = 0;
+        let newRandomDeck = [];
+        while (newRandomDeck.length < 5){
+            let index = Math.floor(Math.random() * allCards.length);
+            if (!newRandomDeck.includes(allCards[index])){
+                newRandomDeck.push(allCards[index]);
+            }
+        }
+        return newRandomDeck
+    }
+
+    const sortDeck = (deck) => {
+        const sortedDeck = deck.sort((a, b) => (a.name > b.name) ? 1 : -1);
+        return sortedDeck;
+    }
+
+    const populatePlayerDeck = () => {
+        const newPlayerDeck = generateRandomDeck();
+        const sortedPlayerDeck = sortDeck(newPlayerDeck);
+        setPlayerDeck(sortedPlayerDeck);
+    }
+
+    const populateAiDeck = () => {
+      const newAiDeck = generateRandomDeck();
+      setAiDeck(newAiDeck);
     }
 
     return (
@@ -67,6 +97,9 @@ const App = () => {
                     />
                     <Route exact path="/game" element={
                         <GamePage
+                            selectedPlayer={selectedPlayer}
+                            playerDeck={playerDeck}
+                            aiDeck={aiDeck}
                         />} 
                     />
                     <Route exact path="/editPlayer" element={

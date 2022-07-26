@@ -30,172 +30,214 @@ db.players.insertMany([
 
   db.cards.insertMany([
     {
-     name: "Ally",
-     sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-     skills: [ {"power": 15},
-     {"top_spin": 35},
-     {"back_spin": 30},
-     {"smash": 20},
-  ]},
+      name: "Ally",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 15},
+        {"Top Spin": 35},
+        {"Back Spin": 30},
+        {"Smash": 20},
+      ]
+    },
     {
       name: "Andrew",
       sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png", 
-      skills: [ {"power": 40},
-     {"top_spin": 10},
-     {"back_spin": 10},
-     {"smash": 40},
-  ]},
+      skills: [ 
+        {"Power": 40},
+        {"Top Spin": 10},
+        {"Back Spin": 10},
+        {"Smash": 40},
+      ]
+    },
     {
       name: "Bob",
       sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-      skills: [ {"power": 20},
-     {"top_spin": 30},
-     {"back_spin": 30},
-     {"smash": 20},
-  ]},
-  {
+      skills: [ {"Power": 20},
+        {"Top Spin": 30},
+        {"Back Spin": 30},
+        {"Smash": 20},
+      ]
+    },
+    {
       name: "Cammy",
       sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-      skills: [ {"power": 40},
-    {"top_spin": 40},
-    {"back_spin": 10},
-    {"smash": 10},
-]},
-{
+      skills: [
+        {"Power": 40},
+        {"Top Spin": 40},
+        {"Back Spin": 10},
+        {"Smash": 10},
+      ]
+    },
+    {
       name: "Chris",
       sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-      skills: [ {"power": 25},
-    {"top_spin": 25},
-    {"back_spin": 40},
-    {"smash": 10},
-]},
-{
+      skills: [ 
+        {"Power": 25},
+        {"Top Spin": 25},
+        {"Back Spin": 40},
+        {"Smash": 10},
+      ]
+    },
+    {
       name: "David",
       sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-      skills: [ {"power": 25},
-    {"top_spin": 25},
-    {"back_spin": 25},
-    {"smash": 25},
-    ]},
+      skills: [ 
+        {"Power": 25},
+        {"Top Spin": 25},
+        {"Back Spin": 25},
+        {"Smash": 25},
+      ]
+    },
     {
       name: "Dev",
       sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-      skills: [ {"power": 30},
-     {"top_spin": 30},
-     {"back_spin": 20},
-     {"smash": 20},
-  ]},
-  {
-    name: "Ewan",
-    sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-    skills: [ {"power": 35},
-   {"top_spin": 35},
-   {"back_spin": 15},
-   {"smash": 15},
-]},
-{
-  name: "Gillian",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 30},
- {"top_spin": 20},
- {"back_spin": 30},
- {"smash": 20},
-]},
-{
-  name: "Iain H",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 50},
- {"top_spin": 15},
- {"back_spin": 15},
- {"smash": 20},
-]}, 
-{
-  name: "Ian W",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 60},
- {"top_spin": 20},
- {"back_spin": 10},
- {"smash": 10},
-]},
-{
-  name: "Jonny",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 40},
- {"top_spin": 40},
- {"back_spin": 15},
- {"smash": 5},
-]},{
-  name: "Josh",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 20},
- {"top_spin": 20},
- {"back_spin": 50},
- {"smash": 10},
-]},
-{
-  name: "Ken",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 30},
- {"top_spin": 20},
- {"back_spin": 40},
- {"smash": 10},
-]},
-{
-  name: "Kieran",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 25},
- {"top_spin": 25},
- {"back_spin": 10},
- {"smash": 40},
-]},
-{
-  name: "Lou",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 35},
- {"top_spin": 15},
- {"back_spin": 25},
- {"smash": 25},
-]},
-{
-  name: "Michael",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 25},
- {"top_spin": 25},
- {"back_spin": 30},
- {"smash": 20},
-]},
-{
-  name: "Nadia",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 20},
- {"top_spin": 20},
- {"back_spin": 30},
- {"smash": 30},
-]},
-{
-  name: "Nick",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 20},
- {"top_spin": 20},
- {"back_spin": 50},
- {"smash": 10},
-]},
-{
-  name: "Shuna",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 25},
- {"top_spin": 25},
- {"back_spin": 20},
- {"smash": 30},
-]},
-{
-  name: "Simona",
-  sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
-  skills: [ {"power": 40},
- {"top_spin": 20},
- {"back_spin": 10},
- {"smash": 30},
-]}
+      skills: [ 
+        {"Power": 30},
+        {"Top Spin": 30},
+        {"Back Spin": 20},
+        {"Smash": 20},
+      ]
+    },
+    {
+      name: "Ewan",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 35},
+        {"Top Spin": 35},
+        {"Back Spin": 15},
+        {"Smash": 15},
+      ]
+    },
+    {
+      name: "Gillian",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 30},
+        {"Top Spin": 20},
+        {"Back Spin": 30},
+        {"Smash": 20},
+      ]
+    },
+    {
+      name: "Iain H",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 50},
+        {"Top Spin": 15},
+        {"Back Spin": 15},
+        {"Smash": 20},
+      ]
+    }, 
+    {
+      name: "Ian W",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 60},
+        {"Top Spin": 20},
+        {"Back Spin": 10},
+        {"Smash": 10},
+      ]
+    },
+    {
+      name: "Jonny",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 40},
+        {"Top Spin": 40},
+        {"Back Spin": 15},
+        {"Smash": 5},
+      ]
+    },
+    {
+      name: "Josh",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 20},
+        {"Top Spin": 20},
+        {"Back Spin": 50},
+        {"Smash": 10},
+      ]
+    },
+    {
+      name: "Ken",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 30},
+        {"Top Spin": 20},
+        {"Back spin": 40},
+        {"smash": 10},
+      ]
+    },
+    {
+      name: "Kieran",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 25},
+        {"Top Spin": 25},
+        {"Back Bpin": 10},
+        {"Smash": 40},
+      ]
+    },
+    {
+      name: "Lou",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 35},
+        {"Top Spin": 15},
+        {"Back Spin": 25},
+        {"Smash": 25},
+      ]
+    },
+    {
+      name: "Michael",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 25},
+        {"Top Spin": 25},
+        {"Back Spin": 30},
+        {"Smash": 20},
+      ]
+    },
+    {
+      name: "Nadia",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 20},
+        {"Top Spin": 20},
+        {"Back Spin": 30},
+        {"Smash": 30},
+      ]
+    },
+    {
+      name: "Nick",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 20},
+        {"Top Spin": 20},
+        {"Back Spin": 50},
+        {"Smash": 10},
+      ]
+    },
+    {
+      name: "Shuna",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 25},
+        {"Top Spin": 25},
+        {"Back Spin": 20},
+        {"Smash": 30},
+      ]
+    },
+    {
+      name: "Simona",
+      sprite: "https://i.ibb.co/02NxzQZ/anon-avatar.png",
+      skills: [ 
+        {"Power": 40},
+        {"Top Spin": 20},
+        {"Back Spin": 10},
+        {"Smash": 30},
+      ]
+    }
   ]);
 
 db.avatars.insertMany([

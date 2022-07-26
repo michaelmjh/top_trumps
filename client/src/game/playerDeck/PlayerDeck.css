@@ -1,0 +1,10 @@
+ul > li {
+    display: inline-block;
+    padding: 25px;
+}
+
+ul {
+    border-style: solid; 
+    display: flex;
+    justify-content: space-around;
+}
