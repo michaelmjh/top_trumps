@@ -77,6 +77,22 @@ const App = () => {
       setAiDeck(newAiDeck);
     }
 
+    const removeCardFromPlayerDeck = (cardToRemove) => {
+        let playerDeckCopy = [...playerDeck]
+        for (let i = 0; i < playerDeckCopy.length; i++) {
+            if (cardToRemove._id === playerDeckCopy[i]._id) {
+                playerDeckCopy.splice(i, 1)
+            }
+        }
+        setPlayerDeck(playerDeckCopy);
+    }
+
+    const returnCardToPlayerDeck = (card) => {
+        let playerDeckCopy = [...playerDeck, card];
+        sortDeck(playerDeckCopy);
+        setPlayerDeck(playerDeckCopy);
+    }
+
     return (
         <>  
             <Router>
@@ -100,6 +116,8 @@ const App = () => {
                             selectedPlayer={selectedPlayer}
                             playerDeck={playerDeck}
                             aiDeck={aiDeck}
+                            removeCardFromPlayerDeck={removeCardFromPlayerDeck}
+                            returnCardToPlayerDeck={returnCardToPlayerDeck}
                         />} 
                     />
                     <Route exact path="/editPlayer" element={

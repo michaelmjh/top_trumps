@@ -1,5 +1,5 @@
-function DeckCard({card, cardSelectedByPlayer}) {
-
+function DeckCard({card, selectedPlayerCard, cardSelectedByPlayer}) {
+ 
     const showSkills = card.skills.map((skill, index) => {
         return (
             <p key={index}>{Object.keys(skill)}: {skill[Object.keys(skill)]}</p>
@@ -12,12 +12,19 @@ function DeckCard({card, cardSelectedByPlayer}) {
 
     return (
         <>
-            <a onClick={handleCardClick}>
-                <p>Name: {card.name}</p>
-                <img src={card.sprite} alt={card.name} height={50}></img>
-                {showSkills}
-                <button></button>
-            </a>
+            {selectedPlayerCard ?
+                    <>
+                        <p>Name: {card.name}</p>
+                        <img src={card.sprite} alt={card.name} height={50}></img>
+                        {showSkills}
+                    </>
+                :    
+                    <a onClick={handleCardClick}>
+                        <p>Name: {card.name}</p>
+                        <img src={card.sprite} alt={card.name} height={50}></img>
+                        {showSkills}
+                    </a>  
+            }
         </>
     );
 }

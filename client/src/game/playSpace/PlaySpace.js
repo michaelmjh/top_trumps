@@ -1,18 +1,37 @@
-function PlaySpace() {
+import AiCard from './AiCard';
+import Controls from './Controls';
+import PlayerCard from './PlayerCard';
+
+function PlaySpace({playerTurn, selectedPlayerCard, selectedSkill, skillSelected, returnCardToPlayerDeck, resetSelectedPlayerCard, resetSelectedSkill, playRoundSelected}) {
 
     return (
         <>
-            <h1>Play Space</h1>
             <p>Score</p>
             <ul>
                 <li>
-                    <p>Player Card</p>
+                    {selectedPlayerCard? <PlayerCard
+                        playerTurn={playerTurn}
+                        selectedPlayerCard={selectedPlayerCard}
+                        skillSelected={skillSelected}
+                        returnCardToPlayerDeck={returnCardToPlayerDeck}
+                        resetSelectedPlayerCard={resetSelectedPlayerCard}
+                        resetSelectedSkill={resetSelectedSkill}
+                    />
+                    :
+                    <p>placeholder image</p>
+                    }
                 </li>
                 <li>
-                    <p>Controls</p>
+                    <Controls
+                        playerTurn={playerTurn}
+                        selectedPlayerCard={selectedPlayerCard}
+                        selectedSkill={selectedSkill}
+                        playRoundSelected={playRoundSelected}
+                    />
                 </li>
                 <li>
-                    <p>Ai Card</p>
+                    <AiCard 
+                    />
                 </li>
             </ul>
         </>

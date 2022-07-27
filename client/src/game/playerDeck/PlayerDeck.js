@@ -1,15 +1,17 @@
 import DeckCard from "./DeckCard";
 import './PlayerDeck.css'
 
-function PlayerDeck({playerDeck, cardSelectedByPlayer}) {
+function PlayerDeck({playerToStart, playerDeck, selectedPlayerCard, cardSelectedByPlayer}) {
 
     const cardsList = playerDeck.map((card, index) => {
         return (
             <>
                 <li>
                     <DeckCard 
-                        card={card} 
-                        key={index} 
+                        key={index}
+                        card={card}
+                        playertoStart={playerToStart} 
+                        selectedPlayerCard={selectedPlayerCard}
                         cardSelectedByPlayer={cardSelectedByPlayer}
                     />
                 </li>
